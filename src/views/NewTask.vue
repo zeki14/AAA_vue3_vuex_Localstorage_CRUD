@@ -2,7 +2,7 @@
   <main>
 
     <section>
-      <form >
+      <!-- <form >
         <label>Nombre del reto</label>
         <input type="text" placeholder="Nombre del reto">
        
@@ -43,13 +43,13 @@
       
         
         <button class="btn-saving" @click="activeSingUpForm = false">Guardar</button>
-      </form>
+      </form> -->
     </section>
     <Footer />
   </main>
 </template>
 
-<script scoped>
+<script>
 import Footer from '@/components/Footer.vue'
 
 export default {

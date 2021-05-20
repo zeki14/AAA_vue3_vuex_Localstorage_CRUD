@@ -4,23 +4,18 @@
   <router-view/>
 </template>
 <script>
-  import NewTask from './components/NewTask.vue'
-  import Home from './components/Todos.vue'
 
 export default {
   name: 'app',
-  components: {
-      Todos,
-      AddTodoItem
-  },
+
     data() {
       return {
           todo_items : []
       }
     },
     methods: {
-        addTodoMethod(newTodoItem){
-            this.todo_items = [...this.todo_items, newTodoItem]
+        addTodoMethod(newTaskTodo){
+            this.todo_items = [...this.todo_items, newTaskTodo]
       }
     },
     mounted(){

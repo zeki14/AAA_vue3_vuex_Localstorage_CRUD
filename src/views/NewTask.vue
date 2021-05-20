@@ -2,6 +2,8 @@
   <main>
 
     <section>
+
+      <AddNewTask />
       <!-- <form >
         <label>Nombre del reto</label>
         <input type="text" placeholder="Nombre del reto">
@@ -51,10 +53,12 @@
 
 <script>
 import Footer from '@/components/Footer.vue'
+import AddNewTask from '@/components/AddNewTask.vue'
 
 export default {
   components: {
-    Footer
+    Footer,
+    AddNewTask
   }
 }
 

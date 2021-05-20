@@ -1,16 +1,16 @@
 <template>
-  <footer class="fixed-bottom"> 
+  <footer class="fixed-bottom bgPrimaryColor">
       <ul>
         <li>
-          <router-link to="/add"><i class="fas fa-plus-circle"></i></router-link>
+          <router-link to="/add"><i class="fas fa-plus-circle text-white"></i></router-link>
         </li>
 
         <li>
-          <router-link to="/"><i class="fas fa-tasks"></i></router-link>
+          <router-link to="/"><i class="fas fa-tasks text-white"></i></router-link>
         </li>
           
         <li>
-         <router-link to="/history"><i class="fas fa-award"></i></router-link>
+         <router-link to="/history"><i class="fas fa-award text-white"></i></router-link>
         </li>
 
       </ul>
@@ -26,7 +26,6 @@ export default {
 <style scoped>
 
     footer {
-      background-color: var(--secondary-color);
     /*       position: fixed;
       bottom: 0; */
       width: 100%;
@@ -41,7 +40,7 @@ export default {
     }
 
     footer ul li i {
-      color: var(--color-icons);
+
       font-size: 1.5rem;
     }
 

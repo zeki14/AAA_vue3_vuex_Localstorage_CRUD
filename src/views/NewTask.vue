@@ -80,7 +80,6 @@ export default {
     margin-top: 2vh;
     padding: 1vh 1vh 1vh 1vh;
     border: none;
-    background-color: var(--input-color);
     border-radius: 5px;
   }
 
@@ -93,7 +92,6 @@ export default {
   .btn-saving {
     margin-top: 3vh;
     padding: 1vh;
-    background-color: var(--complementary-color);
   }
 
 </style>

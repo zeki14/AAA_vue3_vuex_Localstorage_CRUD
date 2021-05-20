@@ -1,7 +1,7 @@
 <template>
-   <header class="fixed-top shadow" >
-      <h3>Bienvenido!</h3>
-      <img src="../assets/icons/user.svg" alt="avatar de usuario">
+   <header class="fixed-top shadow align-items-center bgPrimaryColor" >
+      <h1 class="h1 m-4">Bienvenid@ a tu lista de retos</h1>
+      <img class="img-fluid m-4" src="../assets/icons/asperlog.png" alt="avatar de usuario">
   </header>
 </template>
 
@@ -16,12 +16,9 @@ export default {
     header {
         display: flex;
         justify-content:space-between;
-        background-color: var(--secondary-color);
     }
-
     header img {
-        width: 9vw;
-        height: 9vw;
+      width: 13vw;
+      height: 13vw;
     }
-
 </style>

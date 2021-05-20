@@ -33,9 +33,12 @@ export default {
     list-style: none;
   }
   :root {
-      --primary-color: #1E73BE;
-      --secondary-color: #EDED00;
+    --primary-color: #1E73BE;
+    --secondary-color: #EDED00;
     --backgroundColor: #D4E2EB;
+  }
+  body{
+
   }
   .bgColor{
     background-color: var(--backgroundColor);

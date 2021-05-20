@@ -1,10 +1,10 @@
 <template>
 
-        <section>
+        <section class="">
             <router-link to="/detail">
                 <article v-for="task in items" :key="task.id">
 
-                    <h3 class="btn btn-danger"> {{task.title}}</h3>
+                    <h3 class=""> {{task.title}}</h3>
 
                     <h3> {{task.title}}</h3>
 
@@ -49,7 +49,7 @@ export default {
 <style scoped> 
 
     main section {
-        background-color: var(--secondary-color);
+
         margin-top: 8vh;
     }
 
@@ -59,7 +59,6 @@ export default {
         margin: auto;
         margin-top: 2vh; 
         border-radius: 10px;
-        background-color: var(--input-color);
         /* display: grid;
         grid-template-areas: "i t" "i d" "i p" "i ic";
         grid-template-columns: 30vw 1fr;
@@ -83,7 +82,6 @@ export default {
 
     main section article img {
         grid-area: i;
-        background-color: var(--contact-color);
         border-radius: 10px;
         width: 100%;
         height: 100%;

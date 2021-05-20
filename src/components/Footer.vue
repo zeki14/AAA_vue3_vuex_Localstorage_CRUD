@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="fixed-bottom"> 
       <ul>
         <li>
           <router-link to="/add"><i class="fas fa-plus-circle"></i></router-link>
@@ -27,8 +27,8 @@ export default {
 
     footer {
       background-color: var(--secondary-color);
-      position: fixed;
-      bottom: 0;
+    /*       position: fixed;
+      bottom: 0; */
       width: 100%;
       border-radius: 10px 10px 0 0;
       box-shadow: 0px -5px 30px 0px rgba(0, 0, 0, .25);

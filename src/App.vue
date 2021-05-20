@@ -1,46 +1,29 @@
 <template>
-  <div id="nav">
-  </div>
-  <router-view/>
+  <!-- <div id="nav" class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-4"> -->
+  <main class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-6 mx-auto">
+    <div class="row justify-content-center">
+      <Header class="col" />
+      <router-view class="col" />
+      <Footer class="col" />
+    </div>
+  </main>
+  
 </template>
-<script>
-  import NewTask from './components/NewTask.vue'
-  import Home from './components/Todos.vue'
 
+<script>
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-      Todos,
-      AddTodoItem
-  },
-    data() {
-      return {
-          todo_items : []
-      }
-    },
-    methods: {
-        addTodoMethod(newTodoItem){
-            this.todo_items = [...this.todo_items, newTodoItem]
-      }
-    },
-    mounted(){
-      console.log('App Mounted');
-        if (localStorage.getItem('todo_items'))
-            this.todo_items = JSON.parse(localStorage.getItem('todo_items'));
-    },
-    watch: {
-        todo_items: {
-            handler() {
-                console.log('Todo Items array changed!');
-                localStorage.setItem('todo_items', JSON.stringify(this.todo_items));
-            },
-            deep: true,
-        },
-    },
+    Footer,
+    Header
+  }
 }
 </script>
-<style>
 
+
+<style>
   * {
     margin: 0;
     padding: 0;
@@ -49,7 +32,6 @@ export default {
     text-decoration: none;
     list-style: none;
   }
-
   :root {
       --primary-color: #C1545A;
       --secondary-color: #F6F6F6;
@@ -62,6 +44,4 @@ export default {
       --border-contact-color: #C1545A;
       --font-family: 'Redressed', cursive;
   }
-
 </style>
-

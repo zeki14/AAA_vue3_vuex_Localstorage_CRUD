@@ -1,36 +1,22 @@
 <template>
     <main>
-    <Header />
+    
         <section>
             
-                <!-- <article >
-                    <h3> {{task.title}}</h3>
-                    <p>Categoria: {{task.category}}</p>
-                    <h5>{{task.description}}</h5>
-                    <p>{{task.frecuency}}</p>
-                </article>
-    -->
-
+    
         <router-link class="btn-complete" to="/success" tag="button">Completada</router-link>
         </section>
-    <Footer />
-
-
-
 
     </main>
 </template>
 
 <script>
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 // import tasks from '@/assets/data/api.json'
 
 export default {
-  name: 'Home',
+  name: 'Detail',
   components: {
-    Footer,
-    Header
+
   }
 }
 </script>

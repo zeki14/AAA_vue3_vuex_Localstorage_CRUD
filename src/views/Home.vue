@@ -1,6 +1,5 @@
 <template>
-    <main>
-    <Header />
+
         <section>
             <router-link to="/detail">
                 <article v-for="task in items" :key="task.id">
@@ -21,12 +20,7 @@
                 </article>
             </router-link>
         </section>
-    <Footer />
 
-
-
-
-    </main>
 </template>
 
 <script>
@@ -54,16 +48,13 @@ export default {
 
 <style scoped> 
 
-    main {
-        background-color: var(--secondary-color);
-    }
-
     main section {
+        background-color: var(--secondary-color);
         margin-top: 8vh;
     }
 
     main section article {
-        width: 80vw;
+        /* width: 80vw; */
         height: 20vh;
         margin: auto;
         margin-top: 2vh; 

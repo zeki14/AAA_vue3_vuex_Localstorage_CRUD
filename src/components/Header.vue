@@ -1,5 +1,5 @@
 <template>
-  <header>
+   <header class="fixed-top shadow" >
       <h3>Bienvenido!</h3>
       <img src="../assets/icons/user.svg" alt="avatar de usuario">
   </header>
@@ -14,10 +14,6 @@ export default {
 <style scoped>
 
     header {
-        position: fixed;
-        top: 0;
-        padding: 2vh;
-        width: 100%;
         display: flex;
         justify-content:space-between;
         background-color: var(--secondary-color);

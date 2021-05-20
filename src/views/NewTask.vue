@@ -45,16 +45,13 @@
         <button class="btn-saving" @click="activeSingUpForm = false">Guardar</button>
       </form>
     </section>
-    <Footer />
   </main>
 </template>
 
 <script scoped>
-import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
-    Footer
   }
 }
 

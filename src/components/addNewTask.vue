@@ -1,18 +1,18 @@
 <template>
-        <form @submit="addTask()">
+        <form @submit.prevent="addTask()">
         
         <label>Nombre del reto</label>
-        <input type="text" name="name" placeholder="Nombre del reto">
+        <input type="text" name="name" v-model="name" placeholder="Nombre del reto">
        
-        <label for="category">Categoría</label>
-        <select id= "category" name="category" placeholder="Categoria">
+        <label for="category" >Categoría</label>
+        <select id= "category" name="category" v-model="category" placeholder="Categoria">
                 <option value="value1">Hogar</option>
                 <option value="value2" >En la calle</option>
                 <option value="value3">Actividad social</option>
         </select>
 
         <label for="description">Descripción</label>
-        <textarea id="description" name="description" rows="4" cols="50"  placeholder="Escribe un texto...">
+        <textarea id="description" name="description" v-model="description" rows="4" cols="50"  placeholder="Escribe un texto...">
         </textarea>
 
         <label>Pasos</label>
@@ -48,6 +48,7 @@
         name: "addNewTask",
         data(){
             return {
+               
                 name: '',
                 category:'',
                 description:'',

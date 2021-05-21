@@ -1,7 +1,5 @@
 <template>
-  <main>
-
-    <section>
+      <section>
       <form >
         <label>Nombre del reto</label>
         <input type="text" placeholder="Nombre del reto">
@@ -45,7 +43,6 @@
         <button class="btn-saving" @click="activeSingUpForm = false">Guardar</button>
       </form>
     </section>
-  </main>
 </template>
 
 <script scoped>

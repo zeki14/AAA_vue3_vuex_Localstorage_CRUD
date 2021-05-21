@@ -1,25 +1,23 @@
 <template>
 
-        <section class="">
-            <router-link to="/detail">
+        <div class="mt-10">
+            <router-link  to="/detail">
                 <article v-for="task in items" :key="task.id">
+                <ul class="card py-3 textPrimary">
+                    <li class="h5 text-decoration-none"> {{task.title}}</li>
 
-                    <h3 class=""> {{task.title}}</h3>
+                    <li class="text-decoration-none"> {{task.title}}</li>
 
-                    <h3> {{task.title}}</h3>
+                    <li>Categoria: {{task.category}}</li>
 
-                    <p>Categoria: {{task.category}}</p>
-                    <h5>{{task.description}}</h5>
-                    <!-- <ul>
-                        <li v-for="step in steps" :key="step.id">
-                            {{step.text}}
-                        </li>
-                        
-                    </ul> -->
-                    <p>{{task.frecuency}}</p>
+                    <li>{{task.description}}</li>
+                    
+                    <li>{{task.frecuency}}</li>
+
+                </ul>
                 </article>
             </router-link>
-        </section>
+        </div>
 
 </template>
 
@@ -65,7 +63,7 @@ export default {
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
     }
 
-    main section article h3 {
+    main section article li {
         grid-area: t;
         padding: 1vh;
     }

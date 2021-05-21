@@ -1,12 +1,17 @@
 <template>
   <!-- <div id="nav" class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-4"> -->
-  <main class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-6 mx-auto">
-    <div class="row justify-content-center">
-      <Header class="col" />
-      <router-view class="col" />
-      <Footer class="col" />
-    </div>
-  </main>
+  <div>
+
+    <Header class="col" />
+    <main class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-6 mx-auto ">
+      <div class="row justify-content-center">
+        <router-view class="col routerLink" />
+      </div>
+    </main>
+
+    <Footer class="col" />
+
+  </div>
   
 </template>
 
@@ -37,9 +42,7 @@ export default {
     --secondary-color: #EDED00;
     --backgroundColor: #D4E2EB;
   }
-  body{
-
-  }
+ 
   .bgColor{
     background-color: var(--backgroundColor);
   }
@@ -52,4 +55,8 @@ export default {
   .textPrimary{
     color: var(--primary-color);
   }
+  .routerLink{
+    text-decoration: none;
+  }
+  
 </style>

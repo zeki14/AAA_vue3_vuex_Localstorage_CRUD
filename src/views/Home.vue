@@ -1,12 +1,11 @@
 <template>
 
-        <div class="mt-10">
-            <router-link  to="/detail">
-                <article v-for="task in items" :key="task.id">
+    <div class="mt-10">
+        
+        <article v-for="task in items" :key="task.id">
+            <router-link  class="text-decoration-none"  to="/detail">
                 <ul class="card py-3 textPrimary">
                     <li class="h5 text-decoration-none"> {{task.title}}</li>
-
-                    <li class="text-decoration-none"> {{task.title}}</li>
 
                     <li>Categoria: {{task.category}}</li>
 
@@ -15,9 +14,9 @@
                     <li>{{task.frecuency}}</li>
 
                 </ul>
-                </article>
             </router-link>
-        </div>
+        </article>
+    </div>
 
 </template>
 

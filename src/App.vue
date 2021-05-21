@@ -1,17 +1,19 @@
 <template>
   <!-- <div id="nav" class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-4"> -->
-  <div>
+ 
 
-    <Header class="col" />
-    <main class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-6 mx-auto ">
-      <div class="row justify-content-center">
-        <router-view class="col routerLink" />
+  <Header class="navbar" />
+
+    <div class="container">
+      <main class="col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-6 mx-auto ">
+        <div class="row justify-content-center">
+          <router-view class="col routerLink" />
+        </div>
+      </main>
       </div>
-    </main>
+  <Footer class="col" />
 
-    <Footer class="col" />
-
-  </div>
+ 
   
 </template>
 
@@ -57,6 +59,11 @@ export default {
   }
   .routerLink{
     text-decoration: none;
+  }
+  
+  hr {
+    height: 2px  !important;
+    opacity: 1 !important;
   }
   
 </style>

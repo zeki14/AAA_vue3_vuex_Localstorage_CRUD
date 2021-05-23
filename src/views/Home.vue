@@ -24,7 +24,7 @@
 <script>
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import tasks from '@/assets/data/ejemplos.json'
+import tasks from '@/assets/data/data.json'
 
 export default {
   name: 'Home',

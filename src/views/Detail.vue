@@ -2,6 +2,21 @@
     <main>
     
         <section>
+            <article v-for="task in items" :key="task.id">
+            
+                <ul class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
+                    <li class="h5 textInBlack mb-1 "> {{task.title}}</li>
+
+                    <li class="h6 fst-italic fw-light mx-5">Categoria: {{task.category}}</li>
+                    <li class="p textInBlack fw-bolder mx-5">{{task.frecuency}}</li>
+
+                    <li class="p textInBlack">{{task.description}}</li>
+
+                    <li v-for="(step, index)  in task.steps" :key="index">{{task.steps}}</li>
+                     
+
+                </ul>
+            </article>
             
     
         <router-link class="btn-complete" to="/success" tag="button">Completada</router-link>
@@ -11,14 +26,22 @@
 </template>
 
 <script>
-// import tasks from '@/assets/data/api.json'
+
+import tasks from '@/assets/data/data.json'
 
 export default {
-  name: 'Detail',
-  components: {
+    name: 'Detail',
+ 
+    computed:{ items() { 
+            return tasks.map( (task) => { 
+                return Object.assign( task, { steps: task.steps }) 
+                
+            }) 
+        }
 
-  }
+    }
 }
+
 </script>
 
 

@@ -43,6 +43,7 @@ export default {
     --primary-color: #1E73BE;
     --secondary-color: #EDED00;
     --backgroundColor: #D4E2EB;
+    --black-text-color: #000;
   }
  
   .bgColor{
@@ -56,6 +57,9 @@ export default {
   }
   .textPrimary{
     color: var(--primary-color);
+  }
+  .textInBlack{
+    color: var(--black-text-color);
   }
   .routerLink{
     text-decoration: none;

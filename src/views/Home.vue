@@ -4,18 +4,19 @@
         
         <article v-for="task in items" :key="task.id">
             <router-link  class="text-decoration-none"  to="/detail">
-                <ul class="card py-3 textPrimary">
-                    <li class="h5 text-decoration-none"> {{task.title}}</li>
+                <ul class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
+                    <li class="h5 textInBlack mb-1 "> {{task.title}}</li>
 
-                    <li>Categoria: {{task.category}}</li>
+                    <li class="h6 fst-italic fw-light mx-5">Categoria: {{task.category}}</li>
 
-                    <li>{{task.description}}</li>
-                    
-                    <li>{{task.frecuency}}</li>
+                    <li class="p textInBlack">{{task.description}}</li>
+                     
+                    <li class="p textInBlack fw-bolder mx-5">{{task.frecuency}}</li>
 
                 </ul>
             </router-link>
         </article>
+
     </div>
 
 </template>
@@ -23,7 +24,7 @@
 <script>
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import tasks from '@/assets/data/api.json'
+import tasks from '@/assets/data/ejemplos.json'
 
 export default {
   name: 'Home',
@@ -88,6 +89,9 @@ export default {
     main section article span {
         grid-area: ic;
         padding: 1vh;
+    }
+    ul {
+        border-radius: 6px;
     }
 
 </style>

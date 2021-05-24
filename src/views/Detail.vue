@@ -1,107 +1,76 @@
 <template>
-    <main>
-    
-        <section>
-            <article v-for="task in items" :key="task.id">
-            
-                <ul class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
-                    <li class="h5 textInBlack mb-1 "> {{task.title}}</li>
+ 
+  <div class="container">
+   <h1 class="h3 text-primary"><i class="fas fa-info-circle"></i>  {{title}}</h1>
+   <div class="col-md-12" v-for="task in items" :key="task.id">
+     <div  v-if="taskId == task.id">
+        <div class="card p-2 mb-3 mx-3 shadow-sm">
+            <h2 class="textInBlack text-center">{{task.title}}</h2>
 
-                    <li class="h6 fst-italic fw-light mx-5">Categoria: {{task.category}}</li>
-                    <li class="p textInBlack fw-bolder mx-5">{{task.frecuency}}</li>
+            <div class="d-flex flex-row justify-content-between">
+                <h5 class="h6 fst-italic fw-light mx-2">Categoria: {{task.category}}</h5>
+                <p class="p textInBlack fw-bolder mx-2">{{task.frecuency}}</p>
+            </div>
 
-                    <li class="p textInBlack">{{task.description}}</li>
+            <h6 class="p textInBlack">{{task.description}}</h6>
+        </div> 
+        <h3 class="p text-primary fw-bolder mx-1"><i class="fs-3 fas fa-shoe-prints"></i>   Pasos a seguir:</h3>
+            <ol > 
+                <li v-for="step in task.steps" :key="step.key">
+                    <p>- {{step}}</p>
+                </li>
+            </ol> 
+   
+        <div class="col text-center">
+            <button class="btn btn-success btn-lg shadow-sm" type="submit">¡CONSEGUIDO!</button>
+        </div>
 
-                    <li v-for="(step, index)  in task.steps" :key="index">{{task.steps}}</li>
-                     
+        <h3 class="p text-primary fw-bolder mx-1"><i  class="fs-3 di fas fa-search-plus"></i>  Algunas pistas:</h3>
+            <ol>        
+                <li v-for="clue in task.clues" :key="clue.id">
+                    <p>- {{clue}}</p>
+                </li>
+            </ol> 
+     </div>
+    </div>
+  </div>
 
-                </ul>
-            </article>
-            
-    
-        <router-link class="btn-complete" to="/success" tag="button">Completada</router-link>
-        </section>
-
-    </main>
 </template>
-
 <script>
-
 import tasks from '@/assets/data/data.json'
 
-export default {
-    name: 'Detail',
- 
-    computed:{ items() { 
-            return tasks.map( (task) => { 
-                return Object.assign( task, { steps: task.steps }) 
-                
-            }) 
+ export default{
+    name:'Detail',
+
+    data(){
+   return{
+    taskId:this.$route.params.id,
+    title:"Al detalle:"
         }
+    },
 
-    }
-}
-
+    computed: {
+        items() {
+        return tasks.map((task) => {
+            return task
+        })
+        }
+    },
+ }
+ console.log(tasks)
 </script>
-
+    
 
 <style scoped> 
 
- 
-
-    main section {
-        margin-top: 12vh;
-    
+    .card{
+        border-radius: 12px;
+    }
+    .btn{
+        width: 250px;
+     
     }
 
-    main section article {
-        width: 80vw;
-        height: 20vh;
-        margin: auto;
-        margin-top: 2vh; 
-        border-radius: 10px;
-        background-color: var(--input-color);
-        /* display: grid;
-        grid-template-areas: "i t" "i d" "i p" "i ic";
-        grid-template-columns: 30vw 1fr;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
-    }
-
-    main section article h3 {
-        grid-area: t;
-        padding: 1vh;
-    }
-
-    main section article h5:nth-child(2) {
-        grid-area: d;
-        padding: 1vh;
-    }
-
-    main section article h5:nth-child(3) {
-        grid-area: p;
-        padding: 1vh;
-    }
-
-    main section article img {
-        grid-area: i;
-        background-color: var(--contact-color);
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    main section article span {
-        grid-area: ic;
-        padding: 1vh;
-    }
-
-    main section .btn-complete {
-        /* display: flex;
-        justify-content: center;
-        align-content: center; */
-        background-color: khaki;
-    }
 
 
 </style>

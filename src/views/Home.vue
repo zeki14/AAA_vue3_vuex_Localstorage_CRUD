@@ -3,9 +3,10 @@
     <div class="mt-10">
         
         <article v-for="task in items" :key="task.id">
-            <router-link  class="text-decoration-none"  to="/detail">
-                <ul class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
-                    <li class="h5 textInBlack mb-1 "> {{task.title}}</li>
+            <!-- <router-link  class="text-decoration-none"  to="/detail"> -->
+            
+                <ul @click="goTodetail(task.id)" class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
+                    <li  class="h5 textInBlack mb-1 "> {{task.title}}</li>
 
                     <li class="h6 fst-italic fw-light mx-5">Categoria: {{task.category}}</li>
 
@@ -14,7 +15,7 @@
                     <li class="p textInBlack fw-bolder mx-5">{{task.frecuency}}</li>
 
                 </ul>
-            </router-link>
+            <!-- </router-link> -->
         </article>
 
     </div>
@@ -22,25 +23,27 @@
 </template>
 
 <script>
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import tasks from '@/assets/data/data.json'
 
 export default {
-  name: 'Home',
-  components: {
-    Footer,
-    Header
-  },
-  computed: {
-    items() {
-      return tasks.map((task) => {
-        return task
-      })
-    }
+    name: 'Home',
 
+    computed: {
+        items() {
+        return tasks.map((task) => {
+            return task
+        })
+        }
+    },
+
+    methods:{
+        goTodetail(id) {
+            let taskId = id
+            this.$router.push({name:'Detail',params:{id:taskId}}) }
+
+    }
   }
-}
+    console.log(tasks)
 </script>
 
 
@@ -85,8 +88,8 @@ export default {
         grid-area: ic;
         padding: 1vh;
     }
-    ul {
-        border-radius: 6px;
+    .card {
+        border-radius: 12px;
     }
 
 </style>

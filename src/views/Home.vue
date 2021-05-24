@@ -52,15 +52,10 @@ export default {
     }
 
     main section article {
-        /* width: 80vw; */
         height: 20vh;
         margin: auto;
         margin-top: 2vh; 
         border-radius: 10px;
-        /* display: grid;
-        grid-template-areas: "i t" "i d" "i p" "i ic";
-        grid-template-columns: 30vw 1fr;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
     }
 
     main section article li {

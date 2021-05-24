@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../views/Home.vue'
-// import Detail from '../views/Detail.vue'
+import Detail from '../views/Detail.vue'
 import History from '../views/History.vue'
 import NewTask from '../views/NewTask.vue'
 import Success from '../views/Success.vue'
@@ -12,11 +12,11 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  // {
-  //   path: '/detail',
-  //   name: 'Detail',
-  //   component: Detail
-  // },
+  {
+    path: '/detail',
+    name: 'Detail',
+    component: Detail
+  },
   {
     path: '/history',
     name: 'History',

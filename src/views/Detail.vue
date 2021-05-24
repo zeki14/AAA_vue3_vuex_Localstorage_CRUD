@@ -22,7 +22,7 @@
             </ol> 
    
         <div class="col text-center">
-            <button class="btn btn-success btn-lg shadow-sm" type="submit">¡CONSEGUIDO!</button>
+            <router-link class="btn btn-success btn-lg shadow-sm" to="/success" tag="button">¡CONSEGUIDO!</router-link>
         </div>
 
         <h3 class="p text-primary fw-bolder mx-1"><i  class="fs-3 di fas fa-search-plus"></i>  Algunas pistas:</h3>

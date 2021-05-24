@@ -44,6 +44,8 @@ export default {
     --secondary-color: #EDED00;
     --backgroundColor: #D4E2EB;
     --black-text-color: #000;
+    --success-color: #00DF76;
+
   }
  
   .bgColor{
@@ -60,6 +62,9 @@ export default {
   }
   .textInBlack{
     color: var(--black-text-color);
+  }
+  .successColor{
+    color: var(--success-color);
   }
   .routerLink{
     text-decoration: none;

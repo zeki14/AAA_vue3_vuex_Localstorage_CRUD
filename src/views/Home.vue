@@ -3,8 +3,6 @@
     <div class="mt-10">
         
         <article v-for="task in items" :key="task.id">
-            <!-- <router-link  class="text-decoration-none"  to="/detail"> -->
-            
                 <ul @click="goTodetail(task.id)" class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
                     <li  class="h5 textInBlack mb-1 "> {{task.title}}</li>
 
@@ -15,7 +13,6 @@
                     <li class="p textInBlack fw-bolder mx-5">{{task.frecuency}}</li>
 
                 </ul>
-            <!-- </router-link> -->
         </article>
 
     </div>

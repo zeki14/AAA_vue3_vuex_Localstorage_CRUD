@@ -1,27 +1,35 @@
 <template>
     <main>
-    <Header />
+    <!-- <Header /> -->
         <section>
             <router-link to="/detail">
-                <article v-for="task in items" :key="task.id">
+                <article v-for="task in tasks" :key="task.id">
 
                     <h3 class="btn btn-danger"> {{task.title}}</h3>
 
-                    <h3> {{task.title}}</h3>
+                    <h3> {{task.name}}</h3>
 
                     <p>Categoria: {{task.category}}</p>
                     <h5>{{task.description}}</h5>
-                    <!-- <ul>
-                        <li v-for="step in steps" :key="step.id">
-                            {{step.text}}
-                        </li>
-                        
-                    </ul> -->
                     <p>{{task.frecuency}}</p>
+                    <button class="btn btn-danger btn-sm" @click="deleteTareas(task.id)">
+                        Eliminar
+                    </button>
+                    <!-- <router-link
+                        class="btn btn-warning ml-2 btn-sm"
+                        :to="{
+                            name: 'Editar',
+                            params: {
+                                id: item.id
+                            }
+                        }"
+                    >
+                        Editar
+                    </router-link> -->
                 </article>
             </router-link>
         </section>
-    <Footer />
+    <!-- <Footer /> -->
 
 
 
@@ -30,24 +38,18 @@
 </template>
 
 <script>
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import tasks from '@/assets/data/api.json'
-
+// import Footer from '@/components/Footer';
+// import Header from '@/components/Header';
+// import tasks from '@/assets/data/api.json'
+import { mapState, mapActions } from "vuex";
 export default {
   name: 'Home',
-  components: {
-    Footer,
-    Header
-  },
-  computed: {
-    items() {
-      return tasks.map((task) => {
-        return task
-      })
+   computed: {
+        ...mapState(['tasks'])
+    },
+    methods: {
+        ...mapActions(['deleteTask'])
     }
-
-  }
 }
 </script>
 

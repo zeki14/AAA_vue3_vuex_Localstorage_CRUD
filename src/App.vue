@@ -1,38 +1,26 @@
 <template>
   <div id="nav">
+    <Header />
+    <router-view/>
+    <Footer />
   </div>
-  <router-view/>
 </template>
 <script>
-
-export default {
-  name: 'app',
-
-    data() {
-      return {
-          todo_items : []
-      }
+  import { mapActions} from "vuex";
+  import Header from './components/Header'
+  import Footer from './components/Footer'
+  export default {
+    components: {
+      Header,
+      Footer
     },
     methods: {
-        addTodoMethod(newTaskTodo){
-            this.todo_items = [...this.todo_items, newTaskTodo]
-      }
+      ...mapActions(['getLocalStorage'])
     },
-    mounted(){
-      console.log('App Mounted');
-        if (localStorage.getItem('todo_items'))
-            this.todo_items = JSON.parse(localStorage.getItem('todo_items'));
-    },
-    watch: {
-        todo_items: {
-            handler() {
-                console.log('Todo Items array changed!');
-                localStorage.setItem('todo_items', JSON.stringify(this.todo_items));
-            },
-            deep: true,
-        },
-    },
-}
+    created(){
+      this.getLocalStorage()
+    }
+  }
 </script>
 <style>
 

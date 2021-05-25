@@ -1,19 +1,65 @@
 import { createStore } from 'vuex'
+import router from '../router'
 
 export default createStore({
   state: {
-    tasks: [] 
+    tasks: [],
+    task: {
+      id: '',
+      name: '',
+      category: '',
+      description: '',
+      steps: '',
+      clues: '',
+      times: '',
+      period:''
+    }
   },
   mutations: {
-    setTasks(state, payload) {
+    get(state, payload) {
       state.tasks= payload
-    } 
+    },
+    set(state, payload){
+      state.tasks.push(payload)
+      localStorage.setItem('tasks', JSON.stringify(state.tasks))
+    },
+    delete(state, payload) {
+      state.tasks = state.tasks.filter(item => item.id !== payload)
+      localStorage.setItem('tasks', JSON.stringify(state.tasks))
+    },
+    task(state, payload){
+      if(!state.tasks.find(item => item.id === payload)){
+        router.push('/')
+        return
+      }
+      state.task = state.tasks.find(item => item.id === payload)
+    },
+    update(state, payload){
+      state.tasks = state.tasks.map(item => item.id === payload.id? payload : item)
+      router.push('/')
+      localStorage.setItem('tasks', JSON.stringify(state.tasks))
+    }
   },
   actions: {
-    getTasks({commit}){
-      localStorage.getItem('tasks')
-      const tasks = JSON.parse(localStorage.getItem('tasks'));//este nombre debe ser el mismo que en el localstorage
-      commit('getTasks', tasks)
+    getLoacalStorage({commit}){
+      if(localStorage.getItem('tasks')){
+        const tasks = JSON.parse(localStorage,getItem('tasks'))
+        commit('getTasks', tasks)
+        return
+        }
+        localStorage.setItem('tareas', JSON.stringify([]))
+    },
+    setTasks({ commit }, task){
+      commit('set', task)
+    },
+    deleteTasks({commit}, id){
+      commit('delete', id)
+    },
+    setTask({commit}, id){
+      commit('task', id)
+    },
+    updateTask({commit}, task){
+      commit('update', task)
     }
   },
   modules: {

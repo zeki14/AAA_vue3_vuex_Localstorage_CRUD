@@ -3,13 +3,7 @@
     <Header />
         <section>
             
-                <!-- <article >
-                    <h3> {{task.title}}</h3>
-                    <p>Categoria: {{task.category}}</p>
-                    <h5>{{task.description}}</h5>
-                    <p>{{task.frecuency}}</p>
-                </article>
-    -->
+
 
         <router-link class="btn-complete" to="/success" tag="button">Completada</router-link>
         </section>

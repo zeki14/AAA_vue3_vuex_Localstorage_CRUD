@@ -25,5 +25,8 @@
     h1{
         font-size: 2.5em;
     }
+    .container{
+        padding-bottom: 80px;
+    }
 
 </style> 

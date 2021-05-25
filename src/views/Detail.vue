@@ -68,7 +68,9 @@ import tasks from '@/assets/data/data.json'
     }
     .btn{
         width: 250px;
-     
+    }
+    .container{
+        padding-bottom: 80px;
     }
 
 

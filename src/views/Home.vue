@@ -1,20 +1,24 @@
 <template>
     <main>
     <!-- <Header /> -->
-        <section>
-            <router-link to="/detail">
-                <article v-for="task in tasks" :key="task.id">
+       
+            <!-- <router-link to="/detail"> -->
+              <!-- <ul @click="goTodetail(task.id)" class="card py-3 textPrimary shadow-sm li-3 mb-4 bg-body"> -->
+                <!-- <section > -->
+                
+                <article  v-for="task in tasks" :key="task.id">
+                 <ul @click="goTodetail(task.id)" class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
+                    <li  class="h5 textInBlack mb-1 "> {{task.name}}</li>
 
-                    <h3 class="btn btn-danger"> {{task.title}}</h3>
+                    <li class="h6 fst-italic fw-light mx-5">Categoria: {{task.category}}</li>
 
-                    <h3> {{task.name}}</h3>
-
-                    <p>Categoria: {{task.category}}</p>
-                    <h5>{{task.description}}</h5>
-                    <p>{{task.frecuency}}</p>
-                    <button class="btn btn-danger btn-sm" @click="deleteTareas(task.id)">
+                    <li class="p textInBlack">{{task.description}}</li>
+                     
+                    <li class="p textInBlack fw-bolder mx-5">{{task.frecuency}}</li>
+                    </ul>
+                    <!-- <button class="btn btn-danger btn-sm" @click="deleteTareas(task.id)">
                         Eliminar
-                    </button>
+                    </button> -->
                     <!-- <router-link
                         class="btn btn-warning ml-2 btn-sm"
                         :to="{
@@ -27,8 +31,8 @@
                         Editar
                     </router-link> -->
                 </article>
-            </router-link>
-        </section>
+            <!-- </router-link> -->
+        <!-- </section> -->
     <!-- <Footer /> -->
 
 
@@ -47,8 +51,10 @@ export default {
    computed: {
         ...mapState(['tasks'])
     },
-    methods: {
-        ...mapActions(['deleteTask'])
+    methods:{
+        goTodetail(id) {
+            let taskId = id
+            this.$router.push({name:'Detail',params:{id:taskId}}) }
     }
 }
 </script>
@@ -56,51 +62,6 @@ export default {
 
 <style scoped> 
 
-    main {
-        background-color: var(--secondary-color);
-    }
-
-    main section {
-        margin-top: 8vh;
-    }
-
-    main section article {
-        width: 80vw;
-        height: 20vh;
-        margin: auto;
-        margin-top: 2vh; 
-        border-radius: 10px;
-        background-color: var(--input-color);
-    }
-
-    main section article h3 {
-        grid-area: t;
-        padding: 1vh;
-    }
-
-    main section article h5:nth-child(2) {
-        grid-area: d;
-        padding: 1vh;
-    }
-
-    main section article h5:nth-child(3) {
-        grid-area: p;
-        padding: 1vh;
-    }
-
-    main section article img {
-        grid-area: i;
-        background-color: var(--contact-color);
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    main section article span {
-        grid-area: ic;
-        padding: 1vh;
-    }
 
 </style>
 

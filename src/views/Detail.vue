@@ -1,92 +1,68 @@
+  
 <template>
-    <main>
-    <Header />
-        <section>
-            
+ 
+  <div class="container">
+   <h1 class="h3 text-primary"><i class="fas fa-info-circle"></i>  Al detalle:</h1>
+   <div class="col-md-12" v-for="task in tasks" :key="task.id">
+     <div  v-if="taskId == task.id">
+        <div class="card p-2 mb-3 mx-3 shadow-sm">
+            <h2 class="textInBlack text-center">{{task.title}}</h2>
 
+            <div class="d-flex flex-row justify-content-between">
+                <h5 class="h6 fst-italic fw-light mx-2">Categoria: {{task.category}}</h5>
+                <p class="p textInBlack fw-bolder mx-2">{{task.frecuency}}</p>
+            </div>
 
-        <router-link class="btn-complete" to="/success" tag="button">Completada</router-link>
-        </section>
-    <Footer />
+            <h6 class="p textInBlack">{{task.description}}</h6>
+        </div> 
+        <!-- <h3 class="p text-primary fw-bolder mx-1"><i class="fs-3 fas fa-shoe-prints"></i>   Pasos a seguir:</h3>
+            <ol > 
+                <li v-for="step in task.steps" :key="step.key">
+                    <p>- {{step}}</p>
+                </li>
+            </ol> 
+   
+        <div class="col text-center">
+            <router-link class="btn btn-success btn-lg shadow-sm" to="/success" tag="button">¡CONSEGUIDO!</router-link>
+        </div>
 
+        <h3 class="p text-primary fw-bolder mx-1"><i  class="fs-3 di fas fa-search-plus"></i>  Algunas pistas:</h3>
+            <ol>        
+                <li v-for="clue in task.clues" :key="clue.id">
+                    <p>- {{clue}}</p>
+                </li> -->
+            <!-- </ol>  -->
+     </div>
+    </div>
+  </div>
 
-
-
-    </main>
 </template>
-
 <script>
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-// import tasks from '@/assets/data/api.json'
+// import tasks from '@/assets/data/data.json'
+import { mapState, mapActions } from "vuex";
 
-export default {
-  name: 'Home',
-  components: {
-    Footer,
-    Header
-  }
-}
+ export default {
+    name:'Detail',
+    computed: {
+        ...mapState(['tasks'])
+    },
+    methods: {
+        ...mapActions(['deleteTask'])
+    }
+
+ }
+
 </script>
-
+    
 
 <style scoped> 
-
- 
-
-    main section {
-        margin-top: 12vh;
-    
+    .card{
+        border-radius: 12px;
     }
-
-    main section article {
-        width: 80vw;
-        height: 20vh;
-        margin: auto;
-        margin-top: 2vh; 
-        border-radius: 10px;
-        background-color: var(--input-color);
-        /* display: grid;
-        grid-template-areas: "i t" "i d" "i p" "i ic";
-        grid-template-columns: 30vw 1fr;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+    .btn{
+        width: 250px;
     }
-
-    main section article h3 {
-        grid-area: t;
-        padding: 1vh;
+    .container{
+        padding-bottom: 80px;
     }
-
-    main section article h5:nth-child(2) {
-        grid-area: d;
-        padding: 1vh;
-    }
-
-    main section article h5:nth-child(3) {
-        grid-area: p;
-        padding: 1vh;
-    }
-
-    main section article img {
-        grid-area: i;
-        background-color: var(--contact-color);
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    main section article span {
-        grid-area: ic;
-        padding: 1vh;
-    }
-
-    main section .btn-complete {
-        /* display: flex;
-        justify-content: center;
-        align-content: center; */
-        background-color: khaki;
-    }
-
-
 </style>

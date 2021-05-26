@@ -16,19 +16,19 @@
         </div> 
         <h3 class="p text-primary fw-bolder mx-1"><i class="fs-3 fas fa-shoe-prints"></i>   Pasos a seguir:</h3>
             <ol > 
-                <li v-for="step in task.steps" :key="step.key">
-                    <p>- {{step}}</p>
+                <li v-for="step in task.steps" :key="step.key" class="m-1">
+                    - {{step}}
                 </li>
             </ol> 
    
         <div class="col text-center">
-            <router-link class="btn btn-success btn-lg shadow-sm" to="/success" tag="button">¡CONSEGUIDO!</router-link>
+            <router-link class="btn btn-success btn-lg shadow-sm mb-2" to="/success" tag="button">¡CONSEGUIDO!</router-link>
         </div>
 
         <h3 class="p text-primary fw-bolder mx-1"><i  class="fs-3 di fas fa-search-plus"></i>  Algunas pistas:</h3>
-            <ol>        
-                <li v-for="clue in task.clues" :key="clue.id">
-                    <p>- {{clue}}</p>
+            <ol class="mb-0">
+                <li v-for="clue in task.clues" :key="clue.id" class="m-1">
+                    - {{clue}}
                 </li>
             </ol> 
      </div>

@@ -4,16 +4,13 @@
         <h3 class="text-center successColor fs-4 mt-3">Reto conseguido</h3>
         <h1 class="text-center successColor mt-4">¡Sigue así!</h1>
         <img src="../assets/img/aplauso.gif" alt="Gif de manos aplaudiendo" class="align-self-center mt-3">
-        <h2 class="fs-2 text-center mb-1">28 de mayo </h2>
+        <h2 class="fs-2 text-center mb-1">28 de mayo</h2>
         <p class="text-center mb-1">a las </p>
         <h2 class="fs-2 text-center">14:30</h2>
-
-
     </div>
 </template>
 
 <script>
-
 
 </script>
 

@@ -1,16 +1,16 @@
 <template>
 
-    <div class="mt-10">
+    <div class="mt-1">
         
         <article v-for="task in items" :key="task.id">
                 <ul @click="goTodetail(task.id)" class="card py-3 textPrimary shadow-sm p-3 mb-4 bg-body">
                     <li  class="h5 textInBlack mb-1 "> {{task.title}}</li>
 
-                    <li class="h6 fst-italic fw-light mx-5">Categoria: {{task.category}}</li>
+                    <li class="h6 fst-italic fw-light mx-auto">Categoria: {{task.category}}</li>
 
                     <li class="p textInBlack">{{task.description}}</li>
                      
-                    <li class="p textInBlack fw-bolder mx-5">{{task.frecuency}}</li>
+                    <li class="p textInBlack fw-bolder mt-1 mx-auto">{{task.frecuency}}</li>
 
                 </ul>
         </article>

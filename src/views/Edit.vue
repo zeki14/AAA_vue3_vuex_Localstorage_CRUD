@@ -1,5 +1,7 @@
 <template>
-  Editar {{$route.params.id}} - {{task}}
+  <h1 class="h3 text-primary">
+    <i class="fas fa-edit"></i>  Editar... {{task.name}}
+  </h1>
   <form @submit.prevent="updateTask(task)">
         <InputNewTask :task="task" />
   </form>
@@ -23,4 +25,11 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+ form{
+     padding-bottom: 80px;
+ }
+
+</style>
 

@@ -77,7 +77,9 @@
    section  input,
    section  select,
    section  textarea {
-    margin-top: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
     padding: 1vh 1vh 1vh 1vh;
     border: none;
     background-color: var(--input-color);

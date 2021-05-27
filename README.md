@@ -4,7 +4,9 @@ PROYECTO AAA Factoría F5:
 Proyecto de  una aplicación encargada por la Asociació Asperger Asturias para la asignación y la gestión de tareas.
 
 Stack tecnológico:
-   Framework de frontend: Vuejs3.0 
+   Framework de frontend: 
+      Vuejs3.0 
+   
       Se usa "vue router" y "vuex"
       
   Localstorage

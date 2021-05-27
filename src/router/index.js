@@ -5,6 +5,7 @@ import Detail from '../views/Detail.vue'
 import History from '../views/History.vue'
 import NewTask from '../views/NewTask.vue'
 import Success from '../views/Success.vue'
+import Edit from '../views/Edit.vue'
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: '/success',
     name: 'Success',
     component: Success
+  },
+  {
+    path: '/edit/:id',
+    name: 'Edit',
+    component: Edit
   }
 ]
 

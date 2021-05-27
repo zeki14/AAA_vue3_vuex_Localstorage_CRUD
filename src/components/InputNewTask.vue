@@ -27,7 +27,7 @@
             placeholder="Escribe un texto...">
         </textarea>
 
-        <label>Pasos</label>
+        <label for="steps">Pasos</label>
         <textarea 
             id="steps" 
             name="steps"
@@ -36,40 +36,18 @@
             placeholder="Escribe los pasos a seguir...">
         </textarea>
 
-        <label>Pistas</label>
+        <label for="clues">Pistas</label>
         <textarea 
             id="clues"
              name="clues" 
              v-model="task.clues" 
-             rows="4" 
-             cols="50"  
+             rows="4" cols="50"  
              placeholder="Escribe las pistas...">
         </textarea>
 
-        <label>Frecuencia</label>
-        <select 
-            id="times"
-            name="times"
-            v-model="task.times">
-
-                <option value="value1">1 vez</option>
-                <option value="value2">2 veces</option>
-                <option value="value3">3 veces</option>
-                <option value="value4">4 vez</option>
-                <option value="value5" >5 veces</option>
-                <option value="value6">6 veces</option>
-                <option value="value7">Cada día</option>
-        </select>
-        <select 
-            id="period"
-            name="period"
-            v-model="task.period">
-                <option value="value1">a la semana</option>
-                <option value="value2">al mes</option>
-        </select>
 
         <button 
-            class="btn btn-secondary mt-2 btn-block" 
+            class="btn btn-secondary btn-lg mx-auto mt-2 " 
             type="submit"
             :disabled="bloquear"
         >
@@ -112,10 +90,9 @@
 
 
 
-  .btn-saving {
-    margin-top: 3vh;
-    padding: 1vh;
-    background-color: var(--complementary-color);
+  .btn-secondary {
+      width: 300px;
+      align-self: center;
   }
 
 </style>

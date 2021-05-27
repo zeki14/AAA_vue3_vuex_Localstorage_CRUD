@@ -76,6 +76,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     margin: auto;
+    margin-bottom: 80px;
   }
 
   main form {

@@ -13,6 +13,7 @@ Stack tecnológico:
   
   Bootstrap 5.0.1
   
+  
  Instalación:
  
    Ejecutar comando "npm install" para instalar todas las dependecias del proyecto que se encuentran en  el archivo Package.json
@@ -20,16 +21,19 @@ Stack tecnológico:
  
   
  Para instalar Bootstrap con Vue:
+ 
     npm i --save bootstrap
+    
     npm i --save jquery popper.js
     
  Para generar id aleatorios:
+ 
     npm i shortid
   
   
   Para Ejecutar la aplicación:
   
- to run: "npm run serve"
+      npm run serve
  
  Ramas (branch) de git y estado del proyecto:
  

@@ -27,16 +27,15 @@
         "1": " Consultar con mi madre o padre (o mirar en Google Maps) a qué hora debo coger el autobús para llegar a tiempo.",
         "2":" Salir de casa con tiempo de sobra para llegar a la parada antes de la hora. Importante llegar 5 minutos antes.",
          "3": "LLevaré la tarjeta ciudadana, el bono o dinero suelto justo o en monedas o billetes pequeños (no más de 5€)",
-        "4": "Ponerme en la cola, si veo que la gente está de pie haciendo cola. Si no, puedo sentarme o esperar de pie.",
-        "5": "Cuando llegue mi autobús, subir respetando el orden de cola y pagar.",
-        "6": " Sentarme o ponerme de pie en un lugar donde pueda ver la pantalla que informa sobre las paradas que va haciendo el autobús.",
-        "7": "Cuando mi parada sea la siguiente, tocar el timbre para que el conductor sepa que hay gente que quiere salir en esa parada.",
-        "8": "Si hay mucha gente, puedo intentar acercarme a la puerta de salida (agarrándome bien para no caer)",
-        "9": "Cuando el autobús haya parado, salgo por la pherta de atrás."
+        "4": "Cuando llegue mi autobús, subir respetando el orden de cola y pagar.",
+        "5": " Ver la pantalla que informa sobre las paradas que va haciendo el autobús.",
+        "6": "Cuando mi parada sea la siguiente, tocar el timbre para avisar al conductor.",
+        "7": "Si hay mucha gente, puedo intentar acercarme a la puerta de salida ",
+        "8": "El autobús rara y salgo por la puerta de atrás."
       },
       "category": "Comunidad",
       "clues": {
-        "1": " En las paradas de autobús urbano suelen parar varias líneas. Asegúrate de que recuerdas cuál es la tuya, y que estás en el sentido correcto antes de subir.",
+        "1": " En las paradas de autobús urbano suelen parar varias líneas. Asegúrate de que recuerdas cuál es la tuya.",
         "2":"Si tienes duda con la línea o el horario, pregunta a alguien que esté en la parada, como tú.",
         "3": "Si coges la línea equivocada, bájate lo antes posible y busca en Google Maps si hay una manera rápida de llegar al instituto a tiempo desde donde estás. Si no sabes cómo hacerlo, llama a tu madre o padre para que te ayuden a llegar."
       },

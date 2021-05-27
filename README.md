@@ -16,7 +16,9 @@ Stack tecnológico:
   
  Instalación:
  
-   Ejecutar comando "npm install" para instalar todas las dependecias del proyecto que se encuentran en  el archivo Package.json
+    npm install
+   
+   para instalar todas las dependecias del proyecto que se encuentran en  el archivo Package.json
   
  
   

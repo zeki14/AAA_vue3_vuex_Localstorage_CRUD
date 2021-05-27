@@ -47,7 +47,7 @@
 
 
         <button 
-            class="btn btn-secondary btn-lg mx-auto mt-2 " 
+            class="btn btn-secondary d-block mx-auto mt-2 " 
             type="submit"
             :disabled="bloquear"
         >

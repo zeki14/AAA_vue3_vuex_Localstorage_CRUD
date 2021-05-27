@@ -1,11 +1,13 @@
 <template>
   <main>
+    <h1 class="h3 text-primary">
+      <i class="fas fa-plus-square"></i>  ...un nuevo reto
+    </h1>
+    <form @submit.prevent="processForm">
 
-      <form @submit.prevent="processForm">
+      <InputNewTask :task="task" />
 
-        <InputNewTask :task="task" />
-
-      </form>
+    </form>
  
   </main>
 </template>

@@ -4,12 +4,14 @@ PROYECTO AAA Factoría F5:
 Proyecto de  una aplicación encargada por la Asociació Asperger Asturias para la asignación y la gestión de tareas.
 
 Stack tecnológico:
+
+   Empleo del LocalStorage para almacenar los datos.
+   
    Framework de frontend: 
       Vuejs3.0 
    
       Se usa "vue router" y "vuex"
       
-  Localstorage
   
   Bootstrap 5.0.1
   
@@ -28,6 +30,7 @@ Stack tecnológico:
     
     npm i --save jquery popper.js
     
+    
  Para generar id aleatorios:
  
     npm i shortid
@@ -36,6 +39,7 @@ Stack tecnológico:
   Para Ejecutar la aplicación:
   
       npm run serve
+      
  
  Ramas (branch) de git y estado del proyecto:
  
